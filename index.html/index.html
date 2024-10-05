@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ucapan Selamat Ulang Tahun</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body>
+    <section id="inputSession" class="session animate__animated animate__fadeIn">
+        <h1>Selamat Ulang Tahun!</h1>
+        <p id="message">Masukkan nama anda</p>
+        <input type="text" id="nameInput" placeholder="Masukkan nama" />
+        <!-- Input untuk tanggal lahir -->
+        <p id="message">Masukkan tanggal lahir anda</p>
+        <input type="date" id="birthdateInput" placeholder="Masukkan tanggal lahir" />
+        <button onclick="nextSession('inputSession', 'greetingSession')">Mulai</button>
+    </section>
+
+    <section id="greetingSession" class="session hidden animate__animated">
+        <h2 id="greeting" class="animate__animated animate__jackInTheBox"></h2>
+        <p id="ageMessage"></p> <!-- Menampilkan umur di sini -->
+        <p>Semoga di usia yang makin bertambah ini, kamu tumbuh menjadi anak yang soleh/solehah, pengertian, dan sukses di sekolah serta bisa membanggakan orang tua.</p>
+        <button onclick="nextSession('greetingSession', 'surpriseSession')">Lanjut</button>
+    </section>
+
+    <section id="surpriseSession" class="session hidden animate__animated">
+        <h2 class="animate__animated animate__heartBeat"></h2>
+        <p>Semoga Allah Swt. selalu memberikan kemudahan dalam segala urusan dunia maupun akhirat. Serta semoga sehat selalu dan diberikan rezeki yang melimpah & berkah oleh Allah Swt.</p>
+        <div id="giftBox" class="gift-box">
+            <div class="gift-lid"></div>
+            <div class="gift-body"></div>
+            <button id="FinalSurprise" class="btn-gift" onclick="openGift()"></button>
+        </div>
+    </section>
+    <section id="toFinalSurprise" class="session hidden animate__animated">
+        <img src="cake.png" alt="Kue Ulang Tahun" class="animate__animated animate__fadeInDownBig">
+    </section>
+    
+    
+
+    <!-- Modal untuk pesan alert -->
+    <div id="alertModal" class="modal hidden">
+        <div class="modal-content animate__animated">
+            <span class="close" id="closeModal">&times;</span>
+            <p id="modalMessage">Silakan masukkan nama terlebih dahulu!</p>
+            <button id="closeButton">OK</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Teguh Tri Wibowo. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://willwobagins.github.io/My_Portfolio/" target="_blank" aria-label="Facebook">My Portfolio</a>
+            <a href="https://www.instagram.com/tri.b.3?igsh=MTB4OHIxOHdmaWg4aA==" target="_blank" aria-label="Instagram">Instagram</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
